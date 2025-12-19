@@ -45,7 +45,7 @@ public class SalaryForm extends JPanel {
     private JPanel createHeader() {
         JPanel p = new JPanel(new FlowLayout(FlowLayout.LEFT));
         p.setOpaque(false);
-        JLabel title = new JLabel("📊 QUẢN LÝ LƯƠNG NHÂN VIÊN");
+        JLabel title = new JLabel(" QUẢN LÝ LƯƠNG NHÂN VIÊN");
         title.setFont(new Font("Segoe UI", Font.BOLD, 24));
         title.setForeground(new Color(44, 62, 80));
         p.add(title);

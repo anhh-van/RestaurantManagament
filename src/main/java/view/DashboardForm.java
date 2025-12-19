@@ -22,7 +22,7 @@ public class DashboardForm extends JFrame {
         sidebar.setLayout(new BoxLayout(sidebar, BoxLayout.Y_AXIS));
         sidebar.setBorder(BorderFactory.createEmptyBorder(20, 10, 20, 10));
 
-        JLabel lblLogo = new JLabel("🍽 RESTAURANT");
+        JLabel lblLogo = new JLabel(" RESTAURANT");
         lblLogo.setForeground(Color.WHITE);
         lblLogo.setFont(new Font("Segoe UI", Font.BOLD, 20));
         lblLogo.setAlignmentX(Component.CENTER_ALIGNMENT);
@@ -30,13 +30,13 @@ public class DashboardForm extends JFrame {
 
         sidebar.add(lblLogo);
 
-        JButton btnHome = createMenuButton("🏠 Trang chủ");
-        JButton btnEmployee = createMenuButton("👥 Nhân viên");
-        JButton btnFood = createMenuButton("🍔 Món ăn");
-        JButton btnOrder = createMenuButton("🧾 Đơn hàng");
-        JButton btnReport = createMenuButton("📊 Báo cáo");
-        JButton btnSalary = createMenuButton("💰 Lương");
-        JButton btnLogout = createMenuButton("🚪 Đăng xuất");
+        JButton btnHome = createMenuButton(" Trang chủ");
+        JButton btnEmployee = createMenuButton(" Nhân viên");
+        JButton btnFood = createMenuButton(" Món ăn");
+        JButton btnOrder = createMenuButton(" Đơn hàng");
+        JButton btnReport = createMenuButton(" Báo cáo");
+        JButton btnSalary = createMenuButton(" Lương");
+        JButton btnLogout = createMenuButton(" Đăng xuất");
 
         sidebar.add(btnHome);
         sidebar.add(btnEmployee);
@@ -109,7 +109,7 @@ public class DashboardForm extends JFrame {
         JPanel panel = new JPanel(new BorderLayout());
         panel.setBackground(Color.WHITE);
 
-        JLabel lbl = new JLabel("🎉 CHÀO MỪNG ĐẾN HỆ THỐNG QUẢN LÝ NHÀ HÀNG 🎉", SwingConstants.CENTER);
+        JLabel lbl = new JLabel(" CHÀO MỪNG ĐẾN HỆ THỐNG QUẢN LÝ NHÀ HÀNG ", SwingConstants.CENTER);
         lbl.setFont(new Font("Segoe UI", Font.BOLD, 26));
         lbl.setForeground(new Color(60, 60, 60));
 

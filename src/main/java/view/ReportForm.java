@@ -42,7 +42,7 @@ public class ReportForm extends JPanel {
         p.setBackground(new Color(52, 152, 219));
         p.setLayout(new FlowLayout(FlowLayout.CENTER, 10, 10));
 
-        JLabel lbl = new JLabel("📊 BÁO CÁO DOANH THU");
+        JLabel lbl = new JLabel(" BÁO CÁO DOANH THU");
         lbl.setForeground(Color.WHITE);
         lbl.setFont(new Font("Segoe UI", Font.BOLD, 22));
         p.add(lbl);
@@ -67,9 +67,9 @@ public class ReportForm extends JPanel {
         dateSpinner.setEditor(new JSpinner.DateEditor(dateSpinner, "yyyy-MM-dd"));
         dateSpinner.setFont(new Font("Segoe UI", Font.PLAIN, 14));
 
-        JButton btnCheck = styledButton("🔍 Xem theo ngày", new Color(52, 152, 219));
-        JButton btnReload = styledButton("🔄 Xem tất cả", new Color(46, 204, 113));
-        JButton btnDelete = styledButton("🗑 Xóa ngày chọn", new Color(231, 76, 60));
+        JButton btnCheck = styledButton(" Xem theo ngày", new Color(52, 152, 219));
+        JButton btnReload = styledButton(" Xem tất cả", new Color(46, 204, 113));
+        JButton btnDelete = styledButton(" Xóa ngày chọn", new Color(231, 76, 60));
 
         gbc.gridy = 0; card.add(title, gbc);
         gbc.gridy = 1; card.add(new JLabel("Chọn ngày báo cáo:"), gbc);
@@ -104,9 +104,9 @@ public class ReportForm extends JPanel {
         lblOrders = new JLabel("0");
         lblDate = new JLabel("Tất cả");
 
-        p.add(infoCard("💰 TỔNG DOANH THU", lblRevenue, new Color(46, 204, 113)));
-        p.add(infoCard("🧾 TỔNG ĐƠN HÀNG", lblOrders, new Color(52, 152, 219)));
-        p.add(infoCard("📅 THỜI GIAN LỌC", lblDate, new Color(155, 89, 182)));
+        p.add(infoCard(" TỔNG DOANH THU", lblRevenue, new Color(46, 204, 113)));
+        p.add(infoCard(" TỔNG ĐƠN HÀNG", lblOrders, new Color(52, 152, 219)));
+        p.add(infoCard(" THỜI GIAN LỌC", lblDate, new Color(155, 89, 182)));
 
         return p;
     }

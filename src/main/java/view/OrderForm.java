@@ -42,7 +42,7 @@ public class OrderForm extends JPanel {
         p.setBackground(new Color(52, 152, 219));
         p.setPreferredSize(new Dimension(0, 55));
 
-        JLabel lbl = new JLabel("🧾 QUẢN LÝ ĐẶT MÓN");
+        JLabel lbl = new JLabel(" QUẢN LÝ ĐẶT MÓN");
         lbl.setForeground(Color.WHITE);
         lbl.setFont(new Font("Segoe UI", Font.BOLD, 20));
 
@@ -69,7 +69,7 @@ public class OrderForm extends JPanel {
 
         for (int i = 1; i <= 20; i++) cbTable.addItem(i);
 
-        JButton btnAdd = styledButton("➕ Thêm món", new Color(46, 204, 113));
+        JButton btnAdd = styledButton(" Thêm món", new Color(46, 204, 113));
 
         gbc.gridy = 0;
         card.add(new JLabel("Món ăn"), gbc);

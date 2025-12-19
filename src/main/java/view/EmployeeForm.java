@@ -42,7 +42,7 @@ public class EmployeeForm extends JPanel {
         header.setBackground(PRIMARY);
         header.setBorder(new EmptyBorder(15, 20, 15, 20));
 
-        JLabel title = new JLabel("👥 QUẢN LÝ NHÂN VIÊN");
+        JLabel title = new JLabel(" QUẢN LÝ NHÂN VIÊN");
         title.setForeground(Color.WHITE);
         title.setFont(new Font("Segoe UI", Font.BOLD, 22));
 

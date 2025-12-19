@@ -51,7 +51,7 @@ public class FoodForm extends JPanel {
         header.setPreferredSize(new Dimension(0, 60));
         header.setLayout(new BorderLayout());
 
-        JLabel title = new JLabel("🍽 QUẢN LÝ MÓN ĂN");
+        JLabel title = new JLabel(" QUẢN LÝ MÓN ĂN");
         title.setForeground(Color.WHITE);
         title.setFont(new Font("Segoe UI", Font.BOLD, 22));
         title.setBorder(new EmptyBorder(0,20,0,0));
