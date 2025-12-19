@@ -169,7 +169,7 @@ public class FoodForm extends JPanel {
         return btn;
     }
 
-    // ================= LOGIC =================
+    //  LOGIC
     private void loadTable() {
         model.setRowCount(0);
         List<Food> list = manager.getAllFoods();
