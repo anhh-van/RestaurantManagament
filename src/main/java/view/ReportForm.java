@@ -33,7 +33,6 @@ public class ReportForm extends JPanel {
         add(createMainPanel(), BorderLayout.CENTER);
         add(createFooter(), BorderLayout.SOUTH);
 
-        // Tải dữ liệu mặc định khi mở form
         loadAllOrders();
     }
 
@@ -141,13 +140,11 @@ public class ReportForm extends JPanel {
         table.setGridColor(new Color(230, 230, 230));
         table.setFont(new Font("Segoe UI", Font.PLAIN, 14));
 
-        // Header Table
         table.getTableHeader().setFont(new Font("Segoe UI", Font.BOLD, 14));
         table.getTableHeader().setBackground(new Color(52, 73, 94));
         table.getTableHeader().setForeground(Color.WHITE);
         table.getTableHeader().setPreferredSize(new Dimension(0, 40));
 
-        // Căn lề và format tiền cho cột số 2 (Index 2)
         DefaultTableCellRenderer moneyRenderer = new DefaultTableCellRenderer() {
             @Override
             public void setValue(Object value) {
@@ -175,7 +172,6 @@ public class ReportForm extends JPanel {
         return p;
     }
 
-    // --- LOGIC XỬ LÝ ---
 
     private void loadAllOrders() {
         updateTableData(manager.getAllOrders());

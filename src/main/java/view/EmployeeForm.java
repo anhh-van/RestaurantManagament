@@ -36,7 +36,7 @@ public class EmployeeForm extends JPanel {
         loadTable();
     }
 
-    /* ================= HEADER ================= */
+    /*  HEADER  */
     private JPanel createHeader() {
         JPanel header = new JPanel(new BorderLayout());
         header.setBackground(PRIMARY);
@@ -50,7 +50,7 @@ public class EmployeeForm extends JPanel {
         return header;
     }
 
-    /* ================= CONTENT ================= */
+    /*  CONTENT  */
     private JPanel createContent() {
         JPanel content = new JPanel(new BorderLayout(15, 15));
         content.setBackground(BG);
@@ -61,7 +61,7 @@ public class EmployeeForm extends JPanel {
         return content;
     }
 
-    /* ================= FORM CARD ================= */
+    /*  FORM CARD  */
     private JPanel createFormCard() {
         JPanel card = new JPanel(new BorderLayout());
         card.setPreferredSize(new Dimension(320, 0));
@@ -116,7 +116,7 @@ public class EmployeeForm extends JPanel {
         return btns;
     }
 
-    /* ================= TABLE CARD ================= */
+    // TABLE CARD
     private JPanel createTableCard() {
         JPanel card = new JPanel(new BorderLayout());
         card.setBackground(CARD);
@@ -145,7 +145,6 @@ public class EmployeeForm extends JPanel {
         return card;
     }
 
-    /* ================= LOGIC ================= */
     private void loadTable() {
         model.setRowCount(0);
         List<Employee> list = manager.getAll();
@@ -223,7 +222,7 @@ public class EmployeeForm extends JPanel {
         table.clearSelection();
     }
 
-    /* ================= UI UTILS ================= */
+    // UI UTILS
     private JTextField createField(boolean editable) {
         JTextField f = new JTextField();
         f.setFont(FONT);

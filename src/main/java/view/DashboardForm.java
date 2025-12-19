@@ -15,7 +15,7 @@ public class DashboardForm extends JFrame {
         setLocationRelativeTo(null);
         setLayout(new BorderLayout());
 
-        // ================= SIDEBAR =================
+        //  SIDEBAR
         JPanel sidebar = new JPanel();
         sidebar.setPreferredSize(new Dimension(230, 700));
         sidebar.setBackground(new Color(34, 40, 49));
@@ -49,7 +49,7 @@ public class DashboardForm extends JFrame {
 
         add(sidebar, BorderLayout.WEST);
 
-        // ================= MAIN CONTENT =================
+        //  MAIN CONTENT
         cardLayout = new CardLayout();
         mainPanel = new JPanel(cardLayout);
         mainPanel.setBackground(Color.WHITE);
@@ -63,7 +63,7 @@ public class DashboardForm extends JFrame {
 
         add(mainPanel, BorderLayout.CENTER);
 
-        // ================= EVENTS =================
+        //  EVENTS
         btnHome.addActionListener(e -> showPage("home"));
         btnEmployee.addActionListener(e -> showPage("employee"));
         btnFood.addActionListener(e -> showPage("food"));
@@ -79,7 +79,7 @@ public class DashboardForm extends JFrame {
         setVisible(true);
     }
 
-    // ================= METHODS =================
+    //  METHODS
 
     private JButton createMenuButton(String text) {
         JButton btn = new JButton(text);

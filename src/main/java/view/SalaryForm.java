@@ -58,7 +58,6 @@ public class SalaryForm extends JPanel {
         card.setBorder(new EmptyBorder(20, 20, 20, 20));
         card.setPreferredSize(new Dimension(320, 0));
 
-        // Form fields
         JPanel form = new JPanel(new GridLayout(10, 1, 5, 5));
         form.setBackground(Color.WHITE);
 
@@ -79,7 +78,6 @@ public class SalaryForm extends JPanel {
         form.add(new JLabel("Năm:"));
         form.add(txtYear);
 
-        // Buttons
         JPanel btns = new JPanel(new GridLayout(2, 2, 10, 10));
         btns.setBackground(Color.WHITE);
 
@@ -96,7 +94,6 @@ public class SalaryForm extends JPanel {
         card.add(form, BorderLayout.CENTER);
         card.add(btns, BorderLayout.SOUTH);
 
-        // Sự kiện
         btnAdd.addActionListener(e -> addSalary());
         btnUpdate.addActionListener(e -> updateSalary());
         btnDelete.addActionListener(e -> deleteSalary());
@@ -124,13 +121,11 @@ public class SalaryForm extends JPanel {
         table.setSelectionForeground(Color.BLACK);
         table.setGridColor(new Color(240, 240, 240));
 
-        // Header Table
         table.getTableHeader().setFont(new Font("Segoe UI", Font.BOLD, 14));
         table.getTableHeader().setBackground(new Color(52, 73, 94));
         table.getTableHeader().setForeground(Color.WHITE);
         table.getTableHeader().setPreferredSize(new Dimension(0, 40));
 
-        // Định dạng tiền tệ cho các cột 2, 3, 4
         DefaultTableCellRenderer rightRenderer = new DefaultTableCellRenderer();
         rightRenderer.setHorizontalAlignment(SwingConstants.RIGHT);
         table.getColumnModel().getColumn(2).setCellRenderer(rightRenderer);
@@ -146,7 +141,6 @@ public class SalaryForm extends JPanel {
         return p;
     }
 
-    // --- UI Helpers ---
     private JTextField styledTextField() {
         JTextField f = new JTextField();
         f.setFont(new Font("Segoe UI", Font.PLAIN, 14));
@@ -168,7 +162,6 @@ public class SalaryForm extends JPanel {
         return b;
     }
 
-    // ================= LOGIC (Giữ nguyên hoặc cải tiến nhẹ) =================
     private void loadData() {
         model.setRowCount(0);
         List<Salary> list = dao.getAll();

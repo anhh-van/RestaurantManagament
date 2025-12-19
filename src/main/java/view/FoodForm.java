@@ -23,10 +23,8 @@ public class FoodForm extends JPanel {
         setBackground(new Color(245, 247, 250));
         setBorder(new EmptyBorder(10,10,10,10));
 
-        // ===== HEADER =====
         add(createHeader(), BorderLayout.NORTH);
 
-        // ===== MAIN =====
         JPanel main = new JPanel(new GridLayout(1,2,15,0));
         main.setOpaque(false);
 
@@ -38,7 +36,6 @@ public class FoodForm extends JPanel {
         loadTable();
     }
 
-    // ================= HEADER =================
     private JPanel createHeader() {
         JPanel header = new JPanel() {
             protected void paintComponent(Graphics g) {
@@ -63,7 +60,6 @@ public class FoodForm extends JPanel {
         return header;
     }
 
-    // ================= FORM CARD =================
     private JPanel createFormCard() {
         JPanel card = new JPanel(new GridBagLayout());
         card.setBackground(Color.WHITE);
@@ -115,7 +111,6 @@ public class FoodForm extends JPanel {
         return card;
     }
 
-    // ================= TABLE CARD =================
     private JPanel createTableCard() {
         JPanel card = new JPanel(new BorderLayout());
         card.setBackground(Color.WHITE);
@@ -140,7 +135,6 @@ public class FoodForm extends JPanel {
         return card;
     }
 
-    // ================= HELPER =================
     private void addField(JPanel panel, GridBagConstraints gbc,
                           String label, JComponent field, int y) {
         gbc.gridx = 0;

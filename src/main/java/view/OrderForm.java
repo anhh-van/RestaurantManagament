@@ -37,7 +37,6 @@ public class OrderForm extends JPanel {
         loadFoods();
     }
 
-    // ================= HEADER =================
     private JPanel createHeader() {
         JPanel p = new JPanel();
         p.setBackground(new Color(52, 152, 219));
@@ -51,7 +50,6 @@ public class OrderForm extends JPanel {
         return p;
     }
 
-    // ================= LEFT PANEL =================
     private JPanel createLeftPanel() {
         JPanel card = new JPanel(new GridBagLayout());
         card.setPreferredSize(new Dimension(300, 0));
@@ -107,7 +105,6 @@ public class OrderForm extends JPanel {
         return card;
     }
 
-    // ================= TABLE =================
     private JScrollPane createTable() {
         model = new DefaultTableModel(
                 new String[]{"#", "Món", "SL", "Giá", "Thành tiền"}, 0
@@ -133,7 +130,6 @@ public class OrderForm extends JPanel {
         return new JScrollPane(table);
     }
 
-    // ================= BOTTOM =================
     private JPanel createBottom() {
         JPanel p = new JPanel(new BorderLayout());
         p.setBackground(Color.WHITE);
@@ -161,7 +157,6 @@ public class OrderForm extends JPanel {
         return p;
     }
 
-    // ================= LOGIC =================
     private void loadFoods() {
         List<Food> foods = FoodManager.getAllFoods();
         cbFood.removeAllItems();
@@ -226,13 +221,11 @@ public class OrderForm extends JPanel {
 
         int tableNo = (int) cbTable.getSelectedItem();
 
-        // TÍNH TỔNG TIỀN ĐỂ GỬI XUỐNG DATABASE
         double totalAmount = 0;
         for (OrderDetail d : cart) {
             totalAmount += d.getQty() * d.getPrice();
         }
 
-        // Gọi Manager với 3 tham số
         if (OrderManager.saveOrder(cart, tableNo, totalAmount)) {
             JOptionPane.showMessageDialog(this, "Lưu đơn thành công!");
             cart.clear();
@@ -243,7 +236,6 @@ public class OrderForm extends JPanel {
         }
     }
 
-    // ================= UI HELPER =================
     private JButton styledButton(String text, Color bg) {
         JButton b = new JButton(text);
         b.setFocusPainted(false);

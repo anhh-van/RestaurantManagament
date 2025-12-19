@@ -17,7 +17,11 @@ public class EmployeeManager {
             ResultSet rs =st.executeQuery(sql)){
 
             while (rs.next()){
-                list.add(new Employee(rs.getInt("id"), rs.getString("name"), rs.getString("username"), rs.getString("password"), rs.getString("role")));
+                list.add(new Employee(rs.getInt("id")
+                        , rs.getString("name"),
+                        rs.getString("username"),
+                        rs.getString("password"),
+                        rs.getString("role")));
         }
         } catch (Exception ex){
             ex.printStackTrace();

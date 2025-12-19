@@ -25,7 +25,6 @@ public class ReportManager {
         return total;
     }
 
-    // Lấy danh sách orders để show table, tổng tiền giữ kiểu double
     public List<Object[]> getAllOrders() {
         List<Object[]> list = new ArrayList<>();
         String sql = "SELECT id, employee_id, total, created_at FROM orders ORDER BY created_at DESC";
@@ -50,7 +49,6 @@ public class ReportManager {
     // Xóa đơn theo ngày
     public int deleteOrdersByDate(String date) {
         String sqlSelect = "SELECT id FROM orders WHERE DATE(created_at) = ?";
-        // Đổi 'order_detail' thành 'order_details'
         String sqlDeleteDetail = "DELETE FROM order_details WHERE order_id = ?";
         String sqlDeleteOrder = "DELETE FROM orders WHERE DATE(created_at) = ?";
 

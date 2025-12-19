@@ -21,7 +21,6 @@ public class LoginForm extends JFrame {
         setLayout(new BorderLayout());
         setResizable(false);
 
-        // ===== HEADER =====
         JPanel header = new JPanel();
         header.setBackground(new Color(52, 152, 219));
         header.setBorder(BorderFactory.createEmptyBorder(15, 0, 15, 0));
@@ -33,7 +32,6 @@ public class LoginForm extends JFrame {
         header.add(lblTitle);
         add(header, BorderLayout.NORTH);
 
-        // ===== FORM =====
         JPanel formPanel = new JPanel(new GridLayout(2, 2, 10, 15));
         formPanel.setBorder(BorderFactory.createEmptyBorder(30, 40, 20, 40));
         formPanel.setBackground(Color.WHITE);
@@ -46,7 +44,6 @@ public class LoginForm extends JFrame {
         txtUsername = new JTextField();
         txtPassword = new JPasswordField();
 
-        // Thêm padding mềm mại
         txtUsername.setBorder(BorderFactory.createCompoundBorder(
                 txtUsername.getBorder(),
                 new EmptyBorder(5, 8, 5, 8)

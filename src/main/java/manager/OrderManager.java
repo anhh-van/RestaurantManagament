@@ -9,7 +9,6 @@ public class OrderManager {
 
     public static boolean saveOrder(List<OrderDetail> cart, int tableNo, double totalAmount) {
         String sqlOrder = "INSERT INTO orders (employee_id, total, created_at, table_no) VALUES (?, ?, NOW(), ?)";
-        // Đảm bảo tên bảng là 'order_details' và cột số lượng là 'qty'
         String sqlDetail = "INSERT INTO order_details (order_id, food_id, qty, price) VALUES (?, ?, ?, ?)";
 
         try (Connection conn = JDBCconnect.getConnection()) {
