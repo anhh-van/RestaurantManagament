@@ -180,11 +180,9 @@ public class ReportForm extends JPanel {
 
     private void onFilterByDate() {
         String dateStr = sdf.format((Date) dateSpinner.getValue());
-        // Giả sử ReportManager có hàm lấy đơn hàng theo ngày
-        // Nếu chưa có, bạn hãy viết thêm hoặc dùng manager.getRevenueByDate(dateStr)
-        List<Object[]> list = manager.getAllOrders(); // Tạm lấy tất cả
 
-        // Lọc dữ liệu ngay trên Java nếu Manager chưa hỗ trợ SQL filter
+        List<Object[]> list = manager.getAllOrders();
+
         List<Object[]> filteredList = list.stream()
                 .filter(row -> row[3].toString().contains(dateStr))
                 .toList();
@@ -199,14 +197,13 @@ public class ReportForm extends JPanel {
 
         for (Object[] row : list) {
             try {
-                // Cách ép kiểu an toàn nhất để tránh lỗi "ko hiện tiền"
                 double price = Double.parseDouble(row[2].toString());
                 totalRevenue += price;
 
                 model.addRow(new Object[]{
                         row[0],
                         row[1],
-                        price, // Đưa kiểu Double vào để Renderer format
+                        price,
                         row[3]
                 });
             } catch (Exception e) {
